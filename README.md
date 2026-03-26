@@ -27,9 +27,9 @@ This project was built as part of the **CSE110: Object Oriented Programming** co
 | :--- | :--- | :--- |
 | **Arup Bhowmik Pritom** | `2025-2-60-330` | [@username](https://github.com/) |
 | **Md. Montasirul Bin Abid** | `2025-2-60-323` |[@username](https://github.com/) |
-| **Mehrab Morshed Marjan** | `2025-1-60-142` | [@username](https://github.com/Mehrab30-Mehrab) |
+| **Mehrab Morshed Marjan** | `2025-1-60-142` | [@Mehrab30-Mehrab](https://github.com/Mehrab30-Mehrab) |
 
-*(Note: Add your actual GitHub profile links above)*
+
 
 ---
 
