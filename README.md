@@ -20,6 +20,9 @@ This project was built as part of the **CSE110: Object Oriented Programming** co
 - **Institution:** East West University (EWU)
 - **Course Name:** CSE110 – Object Oriented Programming
 - **Semester:** Spring 2026
+- **Instructor/Faculty:** Sadia Nur Amin
+- **Initial:** SDNA
+- **Designation:** Senior Lecturer, Department of Computer Science & Engineering
 
 ### 👨‍💻 Team Members
 
