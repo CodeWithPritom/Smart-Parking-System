@@ -4,6 +4,7 @@
  */
 package smart.parking.system;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -17,10 +18,9 @@ public class SmartParkingSystem {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        
-              ParkingManager manager = new ParkingManager(5); // 5 Slots Passes
-       
+
+        ParkingManager manager = new ParkingManager(5); // 5 Slots Passes
+
         Scanner sc = new Scanner(System.in);
 
         while (true) {
@@ -31,7 +31,14 @@ public class SmartParkingSystem {
             System.out.println("4. Show Slots");
             System.out.println("5. Exit");
 
-            int choice = sc.nextInt();
+            int choice = 0;
+            try {
+                choice = sc.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input! Please enter a number between 1 and 5.");
+                sc.nextLine(); // Clear the bad input
+                continue;      // Restart the loop
+            }
 
             if (choice == 1) {
 
@@ -42,12 +49,11 @@ public class SmartParkingSystem {
 
                 ParkingTicket ticket = manager.parkVehicle(car);
 
-                if (ticket != null)
+                if (ticket != null) {
                     System.out.println("Ticket ID: " + ticket.getTicketId());
+                }
 
-            }
-
-            else if (choice == 2) {
+            } else if (choice == 2) {
 
                 System.out.print("Enter Bike Number: ");
                 String num = sc.next();
@@ -56,36 +62,33 @@ public class SmartParkingSystem {
 
                 ParkingTicket ticket = manager.parkVehicle(bike);
 
-                if (ticket != null)
+                if (ticket != null) {
                     System.out.println("Ticket ID: " + ticket.getTicketId());
+                }
 
-            }
-
-            else if (choice == 3) {
+            } else if (choice == 3) {
 
                 System.out.print("Enter Ticket ID: ");
                 String id = sc.next();
+                try {
+                    manager.exitVehicle(id);
 
-                manager.exitVehicle(id);
+                } catch (InvalidTicketException e) {
+                    System.out.println(e.getMessage());
+                }
 
-            }
-
-            else if (choice == 4) {
+        }else if (choice == 4) {
 
                 manager.showAvailableSlots();
 
-            }
-
-            else if (choice == 5) {
+            } else if (choice == 5) {
                 break;
             }
 
-        }
-
-        sc.close();
-
     }
-        
-        
-    
+
+    sc.close ();
+
+}
+
 }

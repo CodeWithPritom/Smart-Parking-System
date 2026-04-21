@@ -13,7 +13,7 @@ public class CarFeeCalculator implements FeeCalculator {
     @Override
     public double calculateFee(long hours){
         
-        return hours*20; // Dhori 20 dollar per hour :')
+        return hours*2000; // Dhori 2000 teka per hour :')
     }
     
 }

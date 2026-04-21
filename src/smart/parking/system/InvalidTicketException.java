@@ -8,6 +8,8 @@ package smart.parking.system;
  *
  * @author User
  */
-public class InvalidTicketException {
-    
+public class InvalidTicketException extends Exception {
+    public InvalidTicketException(String message) {
+        super(message);
+    }
 }

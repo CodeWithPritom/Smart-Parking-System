@@ -36,6 +36,11 @@ public class ParkingTicket {
         return (long) Math.ceil(minutes / 60.0); // Rounds up to 1 hour even for 5 mins
     }
 
+    // Returning Minutes
+    public long getExactParkedMinutes() {
+        return Duration.between(entryTime, exitTime).toMinutes();
+    }
+
     public String getTicketId() {
         return ticketId;
     }

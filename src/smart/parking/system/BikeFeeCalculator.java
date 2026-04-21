@@ -12,6 +12,6 @@ public class BikeFeeCalculator implements FeeCalculator {
     @Override
     public double calculateFee(long hours){
         
-        return hours*20;
+        return hours*2000;
     }
 }
